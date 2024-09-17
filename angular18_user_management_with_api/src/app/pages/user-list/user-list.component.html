@@ -1,13 +1,18 @@
 <div class="row">
+  <div class="col-12 text-end">
+    <button class="btn btn-success" routerLink="/create-user">Add New</button>
+  </div>
+</div>
+
+<div class="row">
   <div class="col-6">
     <table class="table table-bordered">
       <thead>
         <tr>
-          <th>Sr No:</th>
-          <th>Name:</th>
-          <th>EmailId:</th>
-          <!-- <th>Mobile No:</th>
-          <th>City:</th> -->
+          <th>Serial No </th>
+          <th>Name </th>
+          <th>Email </th>
+          <th>Action </th>
         </tr>
       </thead>
       <tbody>
@@ -16,8 +21,10 @@
             <td>{{ $index+1 }}</td>
             <td>{{ item.fullName }}</td>
             <td>{{ item.emailId }}</td>
-            <!-- <td>{{ item.mobileNo }}</td>
-            <td>{{ item.city }}</td> -->
+            <td class="text-center">
+              <button (click)="onEdit(item.userId)" class="btn btn-danger mx-2"> Edit </button>
+              <button (click)="onDelete(item.userId)" class="btn btn-danger"> Delete </button>
+            </td>
           </tr>
         }
       </tbody>
