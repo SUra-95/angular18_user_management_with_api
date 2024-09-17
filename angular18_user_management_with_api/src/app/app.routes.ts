@@ -9,7 +9,7 @@ export const routes: Routes = [
         path: '',
         redirectTo: 'login',
         pathMatch: 'full'
-    }, 
+    },
     {
         path: 'login',
         component: LoginComponent
@@ -19,7 +19,7 @@ export const routes: Routes = [
         component: LayoutComponent,
         children: [
             {
-                path: ' user-list',
+                path: 'user-list',
                 component: UserListComponent
             },
             {
